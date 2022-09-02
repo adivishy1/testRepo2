@@ -1,0 +1,19 @@
+template:
+  name: stageRemoteRepo2Sept2
+  identifier: stageRemoteRepo2Sept2
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Approval
+    spec:
+      execution:
+        steps:
+          - step:
+              name: fwf
+              identifier: fwf
+              template:
+                templateRef: stepRemoteMainSept2
+                versionLabel: v1
