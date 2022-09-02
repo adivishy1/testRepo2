@@ -1,0 +1,19 @@
+template:
+  name: stageRemoteREpo2Sept2
+  identifier: stageRemoteREpo2Sept2
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Approval
+    spec:
+      execution:
+        steps:
+          - step:
+              name: asdfad
+              identifier: asdfad
+              template:
+                templateRef: stepRemoteMainSept2
+                versionLabel: v1
