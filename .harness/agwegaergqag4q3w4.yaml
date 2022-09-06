@@ -1,0 +1,22 @@
+pipeline:
+  name: agwegaergqag4q3w4
+  identifier: agwegaergqag4q3w4
+  projectIdentifier: templateGitXDemo
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: a1
+        identifier: a1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: a12
+                  identifier: a12
+                  template:
+                    templateRef: step1
+                    versionLabel: v1
+        tags: {}
