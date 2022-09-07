@@ -1,0 +1,27 @@
+template:
+  name: asdfawefwefaw
+  identifier: asdfawefwefaw
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: gitX_demo
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: asdfafa
+              identifier: asdfafa
+              spec:
+                shell: Bash
+                onDelegate: true
+                source:
+                  type: Inline
+                  spec:
+                    script: echo 1
+                environmentVariables: []
+                outputVariables: []
+              timeout: 10m
