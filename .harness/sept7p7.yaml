@@ -1,0 +1,24 @@
+pipeline:
+  name: sept7p7
+  identifier: sept7p7
+  projectIdentifier: demo_gitX
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        template:
+          templateRef: account.sept7accountStage
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: account_approval
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
