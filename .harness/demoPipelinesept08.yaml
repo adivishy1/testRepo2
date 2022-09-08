@@ -22,3 +22,24 @@ pipeline:
                       spec:
                         approvers:
                           userGroups: <+input>
+    - stage:
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: stage approval
+                  identifier: stage_approval
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: approval from stage template testRepo main
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    approverInputs: []
+        name: stage2
+        identifier: stage2
+        tags: {}
