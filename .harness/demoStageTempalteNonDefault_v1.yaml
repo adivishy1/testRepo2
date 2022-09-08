@@ -1,0 +1,19 @@
+template:
+  name: demoStageTempalteNonDefault
+  identifier: demoStageTempalteNonDefault
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: demo_gitX
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: stage1
+              identifier: stage1
+              template:
+                templateRef: stepTemplateDemo08
+                versionLabel: v2
