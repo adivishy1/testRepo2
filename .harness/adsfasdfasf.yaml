@@ -1,0 +1,13 @@
+pipeline:
+  name: adsfasdfasf
+  identifier: adsfasdfasf
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s2
+        identifier: s2
+        template:
+          templateRef: asdfasdasfv1123
+          versionLabel: v1
