@@ -6,8 +6,8 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: wedfwe
-        identifier: wedfwe
+        name: cds
+        identifier: cds
         template:
           templateRef: q34t534dvss
           versionLabel: b1
