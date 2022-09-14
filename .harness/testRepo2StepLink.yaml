@@ -1,0 +1,29 @@
+pipeline:
+  name: testRepo2StepLink
+  identifier: testRepo2StepLink
+  projectIdentifier: test
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: asd
+        identifier: asd
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: asasd
+                  identifier: asasd
+                  template:
+                    templateRef: testRepoMainStep
+                    versionLabel: v1
+                    templateInputs:
+                      type: ShellScript
+                      spec:
+                        source:
+                          type: Inline
+                          spec:
+                            script: <+input>
+        tags: {}
