@@ -1,0 +1,19 @@
+template:
+  name: nestedStage14R2Patch
+  identifier: nestedStage14R2Patch
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: test
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: s2
+              identifier: s2
+              template:
+                templateRef: stepMain_14
+                versionLabel: v1
