@@ -1,0 +1,24 @@
+pipeline:
+  name: nested15P15R2Main
+  identifier: nested15P15R2Main
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s2
+        identifier: s2
+        template:
+          templateRef: stage15RemoteMainR1
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: adfvdafg
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
