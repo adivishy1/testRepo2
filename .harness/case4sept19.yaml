@@ -6,7 +6,7 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: s1
+        name: s12
         identifier: s1
         template:
           templateRef: stage15RemoteMainR1
