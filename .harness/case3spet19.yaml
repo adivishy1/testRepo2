@@ -1,0 +1,25 @@
+pipeline:
+  name: case3spet19
+  identifier: case3spet19
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        template:
+          templateRef: stageSept19MainR1
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sdfdsa
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          minimumCount: <+input>
+                          userGroups: <+input>
