@@ -1,0 +1,24 @@
+pipeline:
+  name: qaPipelineSept20
+  identifier: qaPipelineSept20
+  projectIdentifier: adithyaGitX
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: ibj
+        identifier: ibj
+        template:
+          templateRef: qaStageSept20
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: zsdv
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
