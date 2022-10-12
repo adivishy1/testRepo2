@@ -1,0 +1,19 @@
+template:
+  name: stageOct12
+  identifier: stageOct12
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: sd
+              identifier: sd
+              template:
+                templateRef: stepOct12
+                versionLabel: v1
