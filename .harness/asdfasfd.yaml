@@ -1,0 +1,24 @@
+pipeline:
+  name: asdfasfd
+  identifier: asdfasfd
+  projectIdentifier: SimplifiedGitSync_Do_Not_Delete
+  orgIdentifier: Simlified_Git_sync
+  tags: {}
+  stages:
+    - stage:
+        name: sa
+        identifier: sa
+        template:
+          templateRef: testStageR1Main
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: approval
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
