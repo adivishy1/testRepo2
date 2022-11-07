@@ -1,0 +1,23 @@
+connector:
+  name: fzdgdfgsdf2341
+  identifier: fzdgdfgsdf2341
+  description: ""
+  orgIdentifier: default
+  projectIdentifier: oldGitSync
+  type: Github
+  spec:
+    url: https://github.com/adivishy1
+    validationRepo: testRepo
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: adivishy1
+          tokenRef: account.myToken
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: account.myToken
+    executeOnDelegate: false
+    type: Account
