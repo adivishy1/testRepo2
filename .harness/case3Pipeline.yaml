@@ -6,8 +6,8 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: s1
-        identifier: s1
+        name: s1123
+        identifier: s1123
         template:
           templateRef: stageMainDec19
           versionLabel: v1
