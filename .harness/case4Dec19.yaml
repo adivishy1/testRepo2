@@ -1,0 +1,13 @@
+pipeline:
+  name: case4Dec19
+  identifier: case4Dec19
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        template:
+          templateRef: stageMainDec19
+          versionLabel: v1
