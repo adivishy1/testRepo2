@@ -1,0 +1,24 @@
+pipeline:
+  name: case3Dec19Qa
+  identifier: case3Dec19Qa
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: w1
+        identifier: w1
+        template:
+          templateRef: qaStageMainDec19
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: dasf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
