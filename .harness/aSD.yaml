@@ -1,0 +1,21 @@
+inputSet:
+  identifier: "aSD"
+  name: "aSD"
+  orgIdentifier: "default"
+  projectIdentifier: "oldGitSync"
+  pipeline:
+    identifier: "oldGitSyncJan9"
+    stages:
+    - stage:
+        identifier: "kj"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "df"
+                type: "HarnessApproval"
+                spec:
+                  approvers:
+                    userGroups:
+                    - "account._account_all_users"
