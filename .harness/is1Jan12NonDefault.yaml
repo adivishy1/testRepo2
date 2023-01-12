@@ -1,0 +1,23 @@
+inputSet:
+  name: is1Jan12NonDefault
+  identifier: is1Jan12NonDefault
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: jan12RemoteNonDefault
+    stages:
+      - stage:
+          identifier: s1
+          template:
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: s1
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups:
+                              - account._account_all_users
