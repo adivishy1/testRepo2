@@ -1,24 +1,25 @@
 pipeline:
-  name: jan12RemoteNonDefault
-  identifier: jan12RemoteNonDefault
-  projectIdentifier: GitX_Remote
-  orgIdentifier: default
+  name: "jan12RemoteNonDefault"
+  identifier: "jan12RemoteNonDefault"
+  projectIdentifier: "GitX_Remote"
+  orgIdentifier: "default"
   tags: {}
   stages:
-    - stage:
-        name: s1
-        identifier: s1
-        template:
-          templateRef: jan12Remote
-          versionLabel: v1
-          templateInputs:
-            type: Approval
-            spec:
-              execution:
-                steps:
-                  - step:
-                      identifier: s1
-                      type: HarnessApproval
-                      spec:
-                        approvers:
-                          userGroups: <+input>
+  - stage:
+      name: "s1"
+      identifier: "s1"
+      template:
+        templateRef: "jan12Remote"
+        versionLabel: "v1"
+        templateInputs:
+          type: "Approval"
+          spec:
+            execution:
+              steps:
+              - step:
+                  identifier: "s1"
+                  type: "HarnessApproval"
+                  spec:
+                    approvers:
+                      minimumCount: "<+input>"
+                      userGroups: "<+input>"
