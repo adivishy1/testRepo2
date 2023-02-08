@@ -1,0 +1,22 @@
+inputSet:
+  name: is1feb8
+  identifier: is1feb8
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: isP1
+    stages:
+      - stage:
+          identifier: ok
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ok
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        minimumCount: 1
+                        userGroups:
+                          - account.testUserGroup2
