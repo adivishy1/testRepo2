@@ -1,0 +1,10 @@
+overlayInputSet:
+  name: ois1feb9
+  identifier: ois1feb9
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipelineIdentifier: isP1
+  inputSetReferences:
+    - is1feb82
+    - is1feb8
+  tags: {}
