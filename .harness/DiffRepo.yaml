@@ -1,0 +1,24 @@
+inputSet:
+  name: DiffRepo
+  identifier: Diffrepo
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: IS_TEST_P1
+    stages:
+      - stage:
+          identifier: s11
+          template:
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: s1
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            minimumCount: 2
+                            userGroups:
+                              - account.testUserGroup2
