@@ -1,5 +1,6 @@
 inputSet:
   name: is1feb8
+  tags: {}
   identifier: is1feb8
   orgIdentifier: default
   projectIdentifier: GitX_Remote
@@ -17,6 +18,6 @@ inputSet:
                     type: HarnessApproval
                     spec:
                       approvers:
-                        minimumCount: 1
+                        minimumCount: 12
                         userGroups:
                           - account.testUserGroup2
