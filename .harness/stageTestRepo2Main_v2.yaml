@@ -1,0 +1,19 @@
+template:
+  name: stageTestRepo2Main
+  identifier: stageTestRepo2Main
+  versionLabel: v2
+  type: Stage
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: ds
+              identifier: ds
+              template:
+                templateRef: stepTestRepoMain
+                versionLabel: v1
