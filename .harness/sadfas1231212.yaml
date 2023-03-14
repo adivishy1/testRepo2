@@ -1,0 +1,9 @@
+overlayInputSet:
+  name: sadfas1231212
+  identifier: sadfas1231212
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipelineIdentifier: inputSetTestP1
+  inputSetReferences:
+    - inputSetTestP1_dr_default
+  tags: {}
