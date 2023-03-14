@@ -1,0 +1,31 @@
+pipeline:
+  name: pipelineChainParentTestRepo2MainPatch
+  identifier: pipelineChainParentTestRepo2MainPatch
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: a
+        identifier: a
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: pipelineChainTestRepoMain
+          project: GitX_Remote
+          inputs:
+            identifier: pipelineChainTestRepoMain
+            stages:
+              - stage:
+                  identifier: as
+                  type: Approval
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: sad
+                            type: HarnessApproval
+                            spec:
+                              approvers:
+                                userGroups: <+input>
