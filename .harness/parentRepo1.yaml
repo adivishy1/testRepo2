@@ -1,0 +1,16 @@
+pipeline:
+  name: parentRepo1
+  identifier: parentRepo1
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: childRepo2Main
+        identifier: childRepo2Main
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: childRepo2MainBranch
+          project: AmitTest
