@@ -1,0 +1,24 @@
+pipeline:
+  name: mar14SP1TestRepo2MainPatch
+  identifier: mar14SP1TestRepo2MainPatch
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: sd
+        identifier: sd
+        template:
+          templateRef: mar14StageTestRepoMain
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: we
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
