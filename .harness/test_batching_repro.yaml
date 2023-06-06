@@ -1,0 +1,41 @@
+pipeline:
+  name: test batching repro
+  identifier: test_batching_repro
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: demo
+        identifier: demo
+        template:
+          templateRef: stage_cds
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ds
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
+    - stage:
+        name: testRepo
+        identifier: testRepo
+        template:
+          templateRef: stage_cds_testRrep
+          versionLabel: vb
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
