@@ -1,0 +1,41 @@
+pipeline:
+  name: test batching pipeline qa
+  identifier: test_batching_pipeline_qa
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: testrepo
+        identifier: testrepo
+        template:
+          templateRef: qa_cds_stage_testRepo
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
+    - stage:
+        name: demo
+        identifier: demo
+        template:
+          templateRef: qa_cds_stage_demo
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
