@@ -24,7 +24,7 @@ pipeline:
                       and approve the pipeline progression
                     includePipelineExecutionHistory: true
                     approvers:
-                      minimumCount: 1
+                      minimumCount: <+input>
                       disallowPipelineExecutor: false
                       userGroups: <+input>
                     isAutoRejectEnabled: false
