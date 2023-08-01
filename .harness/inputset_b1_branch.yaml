@@ -1,0 +1,22 @@
+inputSet:
+  name: inputset b1 branch
+  identifier: inputset_b1_branch
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: pipeline_nd_p123123
+    stages:
+      - stage:
+          identifier: vb
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: xcv
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        minimumCount: 1
+                        userGroups:
+                          - account._account_all_users
