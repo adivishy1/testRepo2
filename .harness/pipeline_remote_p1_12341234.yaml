@@ -26,7 +26,7 @@ pipeline:
                     approvers:
                       disallowPipelineExecutor: false
                       userGroups: <+input>
-                      minimumCount: 1
+                      minimumCount: <+input>
                     isAutoRejectEnabled: false
                     approverInputs: []
         tags: {}
