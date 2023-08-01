@@ -1,0 +1,22 @@
+inputSet:
+  name: same branch same TestRepo2
+  identifier: same_branch_same_TestRepo2
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: pipeline_remote_p1_12341234
+    stages:
+      - stage:
+          identifier: zxc
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: asd
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        minimumCount: 12
+                        userGroups:
+                          - account._account_all_users
