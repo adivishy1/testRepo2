@@ -23,3 +23,10 @@ pipeline:
                       spec:
                         approvers:
                           userGroups: <+input>
+    - stage:
+        name: okok
+        identifier: okok
+        template:
+          templateRef: stage_template_execution_test
+          versionLabel: v1
+          gitBranch: master
