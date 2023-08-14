@@ -1,0 +1,25 @@
+pipeline:
+  name: "ND create pipeline reference test "
+  identifier: ND_create_pipeline_reference_test
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: ok
+        identifier: ok
+        template:
+          templateRef: testStage_template_v2
+          versionLabel: vwe
+          gitBranch: master
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: dsf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
