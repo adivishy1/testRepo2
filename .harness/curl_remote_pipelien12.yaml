@@ -1,0 +1,32 @@
+pipeline:
+  name: curl remote pipelien12
+  identifier: curl_remote_pipelien12
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: sdf
+        identifier: sdf
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: sdaf
+                  identifier: sdaf
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
