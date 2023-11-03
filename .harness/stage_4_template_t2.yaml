@@ -1,0 +1,29 @@
+template:
+  name: stage 4 template
+  identifier: stage_4_template
+  versionLabel: t2
+  type: Stage
+  projectIdentifier: AmitGitX
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Approval
+    spec:
+      execution:
+        steps:
+          - step:
+              name: asdf
+              identifier: asdf
+              type: HarnessApproval
+              timeout: 1d
+              spec:
+                approvalMessage: |-
+                  Please review the following information
+                  and approve the pipeline progression
+                includePipelineExecutionHistory: true
+                approvers:
+                  minimumCount: 1
+                  disallowPipelineExecutor: false
+                  userGroups: <+input>
+                isAutoRejectEnabled: false
+                approverInputs: []
