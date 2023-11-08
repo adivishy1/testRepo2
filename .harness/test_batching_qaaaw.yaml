@@ -1,0 +1,28 @@
+pipeline:
+  name: test batching qaaaw
+  identifier: test_batching_qaaaw
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: m
+        identifier: m
+        template:
+          templateRef: account.stage_m_connector
+          versionLabel: v1
+          gitBranch: main
+    - stage:
+        name: a
+        identifier: a
+        template:
+          templateRef: account.stage_a_connector
+          versionLabel: v1
+          gitBranch: main
+    - stage:
+        name: aa
+        identifier: aa
+        template:
+          templateRef: account.stage_aa_connector
+          versionLabel: v12
+          gitBranch: main
