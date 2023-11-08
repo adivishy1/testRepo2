@@ -1,0 +1,28 @@
+template:
+  name: 23rasdfsdfs
+  identifier: rasdfsdfs
+  versionLabel: vsdv
+  type: Pipeline
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: as
+          identifier: as
+          template:
+            templateRef: asdfasdfasdfsas
+            versionLabel: asdfasdfasdfasdfa
+            gitBranch: aa-main-patch
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: sadfasd
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
