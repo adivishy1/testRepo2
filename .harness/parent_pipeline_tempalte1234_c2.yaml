@@ -1,0 +1,28 @@
+template:
+  name: parent pipeline tempalte1234
+  identifier: parent_pipeline_tempalte1234
+  versionLabel: c2
+  type: Pipeline
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: ss
+          identifier: ss
+          template:
+            templateRef: child_Tempalte_qa
+            versionLabel: r3
+            gitBranch: abcd
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: s1
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
