@@ -26,3 +26,10 @@ pipeline:
           templateRef: account.stage_aa_connector
           versionLabel: v12
           gitBranch: main
+    - stage:
+        name: a2
+        identifier: a2
+        template:
+          templateRef: account.stage_a2_tempalte
+          versionLabel: v23
+          gitBranch: main
