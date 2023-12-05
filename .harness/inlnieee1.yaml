@@ -6,19 +6,27 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: ds
-        identifier: ds
-        template:
-          templateRef: stage_template_referencev
-          versionLabel: v1
-          templateInputs:
-            type: Approval
-            spec:
-              execution:
-                steps:
-                  - step:
-                      identifier: asdf
-                      type: HarnessApproval
-                      spec:
-                        approvers:
-                          userGroups: <+input>
+        name: fas
+        identifier: fas
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: saf
+                  identifier: saf
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
