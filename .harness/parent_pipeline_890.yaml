@@ -1,0 +1,31 @@
+pipeline:
+  name: parent pipeline 890
+  identifier: parent_pipeline_890
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: sdf
+        identifier: sdf
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: child_pipeline1123
+          project: AmitTest
+          inputs:
+            identifier: child_pipeline1123
+            stages:
+              - stage:
+                  identifier: sadf
+                  type: Approval
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: sadf
+                            type: HarnessApproval
+                            spec:
+                              approvers:
+                                userGroups: <+input>
