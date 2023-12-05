@@ -1,0 +1,16 @@
+pipeline:
+  name: parent p234
+  identifier: parent_p234
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: asd
+        identifier: asd
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: child_p123
+          project: GitX_Remote
