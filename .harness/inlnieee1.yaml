@@ -1,0 +1,24 @@
+pipeline:
+  name: inlnieee1
+  identifier: inlnieee1
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: ds
+        identifier: ds
+        template:
+          templateRef: stage_template_referencev
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asdf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
