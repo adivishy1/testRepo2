@@ -1,0 +1,24 @@
+pipeline:
+  name: inline pipeline reff
+  identifier: inline_pipeline_reff
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: dsf
+        identifier: dsf
+        template:
+          templateRef: stage_template_referencev
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asdf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
