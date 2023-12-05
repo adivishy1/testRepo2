@@ -1,0 +1,24 @@
+pipeline:
+  name: inlineee
+  identifier: inlineee
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: fds
+        identifier: fds
+        template:
+          templateRef: stage_template_referencev
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asdf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
