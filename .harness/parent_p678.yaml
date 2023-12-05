@@ -1,0 +1,31 @@
+pipeline:
+  name: parent_p678
+  identifier: parent_p678
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: l
+        identifier: l
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: child_p678
+          project: AmitTest
+          inputs:
+            identifier: child_p678
+            stages:
+              - stage:
+                  identifier: sadf
+                  type: Approval
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: sdf
+                            type: HarnessApproval
+                            spec:
+                              approvers:
+                                userGroups: <+input>
