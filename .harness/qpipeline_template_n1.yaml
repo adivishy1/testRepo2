@@ -1,0 +1,27 @@
+template:
+  name: qpipeline template
+  identifier: qpipeline_template
+  versionLabel: n1
+  type: Pipeline
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: sdf
+          identifier: sdf
+          template:
+            templateRef: qstage
+            versionLabel: b1
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: df
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
