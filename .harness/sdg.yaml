@@ -1,0 +1,25 @@
+pipeline:
+  name: sdg
+  identifier: sdg
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: df
+        identifier: df
+        template:
+          templateRef: q1stage
+          versionLabel: bvw
+          gitBranch: main
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: fdas
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
