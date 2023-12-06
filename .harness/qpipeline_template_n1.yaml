@@ -33,3 +33,20 @@ template:
                       isAutoRejectEnabled: false
                       approverInputs: []
           tags: {}
+      - stage:
+          name: dfg
+          identifier: dfg
+          template:
+            templateRef: qstage
+            versionLabel: b1
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: df
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
