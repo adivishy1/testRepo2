@@ -9,19 +9,27 @@ template:
   spec:
     stages:
       - stage:
-          name: sdf
-          identifier: sdf
-          template:
-            templateRef: qstage
-            versionLabel: b1
-            templateInputs:
-              type: Approval
-              spec:
-                execution:
-                  steps:
-                    - step:
-                        identifier: df
-                        type: HarnessApproval
-                        spec:
-                          approvers:
-                            userGroups: <+input>
+          name: cvbn
+          identifier: cvbn
+          description: ""
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    name: gf
+                    identifier: gf
+                    type: HarnessApproval
+                    timeout: 1d
+                    spec:
+                      approvalMessage: |-
+                        Please review the following information
+                        and approve the pipeline progression
+                      includePipelineExecutionHistory: true
+                      approvers:
+                        minimumCount: 1
+                        disallowPipelineExecutor: false
+                        userGroups: <+input>
+                      isAutoRejectEnabled: false
+                      approverInputs: []
+          tags: {}
