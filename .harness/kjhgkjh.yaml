@@ -1,0 +1,24 @@
+pipeline:
+  name: kjhgkjh
+  identifier: kjhgkjh
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: fg
+        identifier: fg
+        template:
+          templateRef: qstage
+          versionLabel: b1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: df
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
