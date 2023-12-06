@@ -1,0 +1,24 @@
+pipeline:
+  name: sdfggfdgdf
+  identifier: sdfggfdgdf
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: dfg
+        identifier: dfg
+        template:
+          templateRef: qa_stage_template
+          versionLabel: v2
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ds
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
