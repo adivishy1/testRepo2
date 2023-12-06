@@ -1,0 +1,25 @@
+pipeline:
+  name: cvbcv
+  identifier: cvbcv
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: fb
+        identifier: fb
+        template:
+          templateRef: q1stage
+          versionLabel: bvw
+          gitBranch: main
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: fdas
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
