@@ -22,3 +22,20 @@ pipeline:
                       spec:
                         approvers:
                           userGroups: <+input>
+    - stage:
+        name: ghj
+        identifier: ghj
+        template:
+          templateRef: q1stage
+          versionLabel: bvw
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: fdas
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
