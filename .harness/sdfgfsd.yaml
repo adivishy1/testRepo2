@@ -1,0 +1,24 @@
+pipeline:
+  name: sdfgfsd
+  identifier: sdfgfsd
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: dsgf
+        identifier: dsgf
+        template:
+          templateRef: sfdgdsfg
+          versionLabel: sdfgsdfgs
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sdf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
