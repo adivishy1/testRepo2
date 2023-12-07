@@ -1,0 +1,24 @@
+pipeline:
+  name: asdfsdaf
+  identifier: asdfsdaf
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: cvbn
+        identifier: cvbn
+        template:
+          templateRef: sfdgdsfg
+          versionLabel: sdfgsdfgs
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sdf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
