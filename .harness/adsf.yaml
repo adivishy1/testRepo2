@@ -6,8 +6,8 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: asdf
-        identifier: asdf
+        name: dfgh
+        identifier: dfgh
         description: ""
         type: Deployment
         spec:
@@ -16,8 +16,10 @@ pipeline:
             serviceRef: <+input>
             serviceInputs: <+input>
           environment:
-            environmentRef: dsaf
+            environmentRef: <+input>
             deployToAll: false
+            environmentInputs: <+input>
+            serviceOverrideInputs: <+input>
             infrastructureDefinitions: <+input>
           execution:
             steps:
