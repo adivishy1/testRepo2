@@ -1,0 +1,33 @@
+pipeline:
+  name: parent sdfgsfg
+  identifier: parent_sdfgsfg
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: l
+        identifier: l
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: fgsdfg
+          project: GitX_Remote
+          inputs:
+            identifier: fgsdfg
+            stages:
+              - stage:
+                  identifier: dsgf
+                  template:
+                    templateInputs:
+                      type: Approval
+                      spec:
+                        execution:
+                          steps:
+                            - step:
+                                identifier: fdas
+                                type: HarnessApproval
+                                spec:
+                                  approvers:
+                                    userGroups: <+input>
