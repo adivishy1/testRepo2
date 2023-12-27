@@ -1,0 +1,24 @@
+pipeline:
+  name: hgjk
+  identifier: hgjk
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: lj
+        identifier: lj
+        template:
+          templateRef: sdfgsdfgsd
+          versionLabel: fdsggd
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: hkj
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
