@@ -1,0 +1,25 @@
+pipeline:
+  name: test pipeline qw12
+  identifier: test_pipeline_qw12
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: fd
+        identifier: fd
+        tags: {}
+        template:
+          templateRef: org.org_tempalte
+          versionLabel: qw12
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sdfa
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
