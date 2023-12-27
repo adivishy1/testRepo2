@@ -1,0 +1,24 @@
+pipeline:
+  name: sdfgsd
+  identifier: sdfgsd
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: ghn
+        identifier: ghn
+        template:
+          templateRef: org.test_versions
+          versionLabel: s1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: avsd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
