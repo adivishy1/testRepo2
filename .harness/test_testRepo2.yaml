@@ -1,0 +1,32 @@
+pipeline:
+  name: test testRepo2
+  identifier: test_testRepo2
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: bd
+        identifier: bd
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: bdf
+                  identifier: bdf
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
