@@ -1,0 +1,32 @@
+pipeline:
+  name: testRepo2 pipeline project123
+  identifier: testRepo2_pipeline_project123
+  projectIdentifier: new_Gitx_project
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: zcvx
+        identifier: zcvx
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: cv
+                  identifier: cv
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
