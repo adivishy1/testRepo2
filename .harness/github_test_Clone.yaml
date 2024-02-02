@@ -1,0 +1,32 @@
+---
+pipeline:
+  projectIdentifier: "naidusanity"
+  orgIdentifier: "default"
+  tags: {}
+  stages:
+  - stage:
+      name: "ad"
+      identifier: "ad"
+      description: ""
+      type: "Approval"
+      spec:
+        execution:
+          steps:
+          - step:
+              name: "dsfv"
+              identifier: "dsfv"
+              type: "HarnessApproval"
+              timeout: "1d"
+              spec:
+                approvalMessage: "Please review the following info\nand approve the\
+                  \ pipeline progression"
+                includePipelineExecutionHistory: true
+                approvers:
+                  minimumCount: 1
+                  disallowPipelineExecutor: false
+                  userGroups: "<+input>"
+                isAutoRejectEnabled: false
+                approverInputs: []
+      tags: {}
+  identifier: "github_test_Clone"
+  name: "github test - Clone"
