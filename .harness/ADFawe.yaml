@@ -17,7 +17,7 @@ pipeline:
               execution:
                 steps:
                   - step:
-                      identifier: adsf
+                      identifier: adsfsadfasd
                       type: HarnessApproval
                       spec:
                         approvers:
