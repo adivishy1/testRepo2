@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_adivishy1_testRepo2_1722970800218-push-trigger-input-set
+  identifier: Build_adivishy1_testRepo2_1722970800218pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: gitops2
+  pipeline:
+    identifier: Build_adivishy1_testRepo2_1722970800218
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
