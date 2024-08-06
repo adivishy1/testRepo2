@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_adivishy1_testRepo2_1722970800218
+  name: Build testRepo2
+  orgIdentifier: default
+  projectIdentifier: gitops2
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: org.adi_org_github
+        repoName: adivishy1/testRepo2
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
