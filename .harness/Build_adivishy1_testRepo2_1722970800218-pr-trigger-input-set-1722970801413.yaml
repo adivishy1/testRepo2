@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_adivishy1_testRepo2_1722970800218-pr-trigger-input-set
+  identifier: Build_adivishy1_testRepo2_1722970800218prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: gitops2
+  pipeline:
+    identifier: Build_adivishy1_testRepo2_1722970800218
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
