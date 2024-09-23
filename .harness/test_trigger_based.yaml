@@ -1,5 +1,5 @@
 pipeline:
-  name: test trigger based
+  name: test trigger based123
   identifier: test_trigger_based
   projectIdentifier: AmitTest
   orgIdentifier: default
