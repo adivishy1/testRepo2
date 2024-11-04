@@ -1,0 +1,5 @@
+service:
+  name: test servce
+  identifier: test_servce
+  orgIdentifier: default
+  projectIdentifier: adithya_test
