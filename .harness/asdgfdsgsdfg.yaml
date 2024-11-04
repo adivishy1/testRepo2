@@ -1,0 +1,26 @@
+pipeline:
+  name: asdgfdsgsdfg
+  identifier: asdgfdsgsdfg
+  projectIdentifier: adithya_test
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: sdf
+        identifier: sdf
+        tags: {}
+        template:
+          templateRef: teasra_asfasfd
+          versionLabel: sd32e
+          gitBranch: b1-patch-b1-patch
+          templateInputs:
+            type: Deployment
+            spec:
+              environment:
+                environmentRef: <+input>
+                environmentInputs: <+input>
+                serviceOverrideInputs: <+input>
+                infrastructureDefinitions: <+input>
+              service:
+                serviceRef: <+input>
+                serviceInputs: <+input>
