@@ -24,3 +24,36 @@ pipeline:
               service:
                 serviceRef: <+input>
                 serviceInputs: <+input>
+    - stage:
+        name: t1
+        identifier: t1
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          infrastructure:
+            type: KubernetesDirect
+            spec:
+              connectorRef: <+input>
+              namespace: <+input>
+              automountServiceAccountToken: true
+              nodeSelector: {}
+              os: Linux
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    connectorRef: <+input>
+                    image: <+input>
+                    shell: Sh
+                    command: echo 123
+                  description: dfgsdfgsd
+  properties:
+    ci:
+      codebase:
+        connectorRef: adi_github
+        repoName: demo
+        build: <+input>
