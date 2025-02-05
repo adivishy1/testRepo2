@@ -1,0 +1,21 @@
+inputSet:
+  pipeline:
+    identifier: asdfasdfasdfasdfasdfsa
+    stages:
+      - stage:
+          identifier: dsf
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: fdgdf
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
+  name: sdfgfsggdsfg
+  identifier: sdfgfsggdsfg
+  orgIdentifier: default
+  projectIdentifier: AmitTest
