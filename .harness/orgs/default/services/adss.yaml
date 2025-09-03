@@ -1,0 +1,4 @@
+service:
+  name: adss
+  identifier: adss
+  orgIdentifier: default
