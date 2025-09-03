@@ -1,0 +1,4 @@
+service:
+  name: test ingsdofs
+  identifier: test_ingsdofs
+  orgIdentifier: default
