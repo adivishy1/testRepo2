@@ -1,3 +1,3 @@
 import data.pipeline
 
-deny{true}
+deny{false}
