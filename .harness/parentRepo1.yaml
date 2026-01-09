@@ -23,3 +23,8 @@ pipeline:
           org: default
           pipeline: childRepo2
           project: AmitTest
+        variables:
+          - name: var1
+            type: String
+            description: ""
+            value: bcd
