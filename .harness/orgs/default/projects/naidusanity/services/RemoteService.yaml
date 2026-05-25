@@ -1,0 +1,5 @@
+service:
+  name: RemoteService
+  identifier: RemoteService
+  orgIdentifier: default
+  projectIdentifier: naidusanity
