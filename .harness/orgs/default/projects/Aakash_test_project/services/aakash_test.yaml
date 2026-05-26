@@ -1,0 +1,5 @@
+service:
+  name: aakash_test
+  identifier: aakash_test
+  orgIdentifier: default
+  projectIdentifier: Aakash_test_project
