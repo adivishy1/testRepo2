@@ -3,3 +3,6 @@ service:
   identifier: aakash_test
   orgIdentifier: default
   projectIdentifier: Aakash_test_project
+  serviceDefinition:
+    spec: {}
+    type: WinRm
